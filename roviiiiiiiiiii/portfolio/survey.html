@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">Please help us improve by filling out this short survey.</p>
+
+  <form id="survey-form">
+    <!-- Name -->
+    <label id="name-label" for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+    <!-- Email -->
+    <label id="email-label" for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+    <!-- Number -->
+    <label id="number-label" for="number">Age:</label>
+    <input type="number" id="number" name="age" min="10" max="120" placeholder="Enter your age" required />
+
+    <!-- Dropdown -->
+    <label for="dropdown">Which option best describes your role?</label>
+    <select id="dropdown" name="role">
+      <option value="">Select your role</option>
+      <option value="student">Student</option>
+      <option value="developer">Developer</option>
+    </select>
+
+    <!-- Radio buttons -->
+    <p>Would you recommend us to a friend?</p>
+    <label>
+      <input type="radio" name="recommend" value="yes" /> Yes
+    </label><br />
+    <label>
+      <input type="radio" name="recommend" value="no" /> No
+    </label>
+
+    <!-- Checkboxes -->
+    <p>What features did you use? (Select all that apply)</p>
+    <label>
+      <input type="checkbox" name="features" value="support" /> Customer Support
+    </label><br />
+    <label>
+      <input type="checkbox" name="features" value="dashboard" /> Dashboard
+    </label><br />
+    <label>
+      <input type="checkbox" name="features" value="analytics" /> Analytics
+    </label>
+
+    <!-- Textarea -->
+    <p>Any additional comments?</p>
+    <textarea name="comments" rows="4" cols="30" placeholder="Enter your comments here..."></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</body>
+</html>
